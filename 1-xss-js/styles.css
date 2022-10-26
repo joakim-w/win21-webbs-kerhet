@@ -91,7 +91,7 @@ body {
   background-color: hsl(163, 30%, 20%);
 }
 
-#output h1 {
+.title {
   margin-top: 2rem;
   text-align: center;
 }
