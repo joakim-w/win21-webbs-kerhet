@@ -21,7 +21,31 @@
         <textarea id="messageBody" cols="30" rows="10"></textarea>
       </div>
 
+      <div class="input-group">
+        <label for="messageImage">Image Url</label>
+        <input type="text" id="messageImage">
+      </div>
+
+      <div id="errorMessage" class="d-none" >Please enter all the fields</div>
+      <button class="btn">Send Message</button>
     </form>
+
+    <div id="output">
+      <h1>Messages</h1>
+
+      <div class="message">
+        <header class="message-header">
+          <div class="img-container">
+            <img src="https://images.unsplash.com/photo-1666679643373-f2e184deefce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="">
+          </div>
+          <h2>Message Headline</h2>
+        </header>
+        <div class="message-body">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque itaque illum quam! Error deserunt quaerat quam perspiciatis debitis consectetur quibusdam maxime quasi iusto, nam doloribus asperiores, soluta laborum, voluptates vitae?
+        </div>
+      </div>
+
+    </div>
 
   </div>
   <script src="script.js"></script>
