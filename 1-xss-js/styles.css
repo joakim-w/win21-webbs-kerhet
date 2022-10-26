@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --clr-bg: #e7f1ee;
+  --clr-primary: #305b4f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--clr-bg);
+}
+
+.container {
+  width: 600px;
+  margin: 100px auto;
+}
+
+#messageForm {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 9px #00000039;
+}
+
