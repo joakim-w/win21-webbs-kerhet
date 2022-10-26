@@ -7,18 +7,26 @@ const messages = [
   //   body: 'meddelande', 
   //   imageUrl: 'https://images.unsplash.com/photo-1661961112835-ca6f5811d2af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80'
   // },
-  {
-    headline: 'Message Headline', 
-    body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque itaque illum quam! Error deserunt quaerat quam perspiciatis debitis consectetur quibusdam maxime quasi iusto, nam doloribus asperiores, soluta laborum, voluptates vitae?', 
-    imageUrl: 'https://images.unsplash.com/photo-1666679643373-f2e184deefce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80'
-  },
+  // {
+  //   headline: 'Message Headline', 
+  //   body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque itaque illum quam! Error deserunt quaerat quam perspiciatis debitis consectetur quibusdam maxime quasi iusto, nam doloribus asperiores, soluta laborum, voluptates vitae?', 
+  //   imageUrl: 'https://images.unsplash.com/photo-1666679643373-f2e184deefce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80'
+  // },
 ];
 
 const htmlEncode = (dirty) => {
-  const encoded = dirty.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/&/g, '&amp;').replace(/'/g, '&apos;').replace(/onerror/g, '')
+  // const encoded = dirty.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/&/g, '&amp;').replace(/'/g, '&apos;').replace(/onerror/g, '')
+  // console.log(dirty);
+  // console.log(encoded);
+  // return encoded;
+
+  //Blacklist - specificerar vad man vill blockera, get det lätt att missa någonting
+
+  //WHITELIST - specificerar vad man vill tillåta, ALLT annat blockeras
+  const clean = DOMPurify.sanitize(dirty,{ALLOWED_TAGS: ['b', 'i', 'img']});
   console.log(dirty);
-  console.log(encoded);
-  return encoded;
+  console.log(clean);
+  return clean
 }
 
 const createMessageElement = message => {
@@ -94,7 +102,7 @@ const renderMessages = () => {
   }
 }
 
-renderMessages()
+renderMessages();
 
 const submitHandler = (e) => {
   e.preventDefault();
@@ -122,9 +130,9 @@ const submitHandler = (e) => {
   e.target.querySelector('#errorMessage').classList.add('d-none');
 
   const message = {
-    headline,
-    body,
-    imageUrl
+    headline: DOMPurify.sanitize(headline),
+    body: DOMPurify.sanitize(body),
+    imageUrl: DOMPurify.sanitize(imageUrl)
   }
   messages.push(message);
   console.log(messages);
