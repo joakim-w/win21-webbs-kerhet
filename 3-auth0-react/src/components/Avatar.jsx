@@ -1,8 +1,17 @@
-import React from 'react'
+import { useState } from 'react'
+import Dropdown from './Dropdown'
 
-const Avatar = () => {
+const Avatar = ({ user }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   return (
-    <div>Avatar</div>
+    <div className='avatar-dropdown'>
+      <div className='avatar' onClick={() => setDropdownOpen(state => !state)}>
+        <img src={user.picture} alt={user.name} />
+      </div>
+      {
+        dropdownOpen && <Dropdown />
+      }
+    </div>
   )
 }
 

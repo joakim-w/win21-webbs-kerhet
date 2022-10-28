@@ -1,10 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Avatar from './Avatar';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
-
-  const isAuthenticated = false;
+  const { loginWithRedirect, isAuthenticated, user } = useAuth0();
+  
 
   return (
     <nav className='navbar'>
@@ -14,10 +15,10 @@ const Navbar = () => {
           <li><NavLink className="nav-link" to="/profile" >Profile</NavLink></li>
         </ul>
         {
-          !isAuthenticated && <button className='login-btn'>Log In</button>
+          !isAuthenticated && <button onClick={() => loginWithRedirect()} className='login-btn'>Log In</button>
         }
         {
-          isAuthenticated && <Avatar />
+          isAuthenticated && <Avatar user={user} />
         }
       </div>
     </nav>
