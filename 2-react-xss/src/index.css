@@ -15,7 +15,8 @@ body {
   width: 600px;
   margin: 20px auto;
 }
-.message-form {
+.message-form,
+.message {
   background-color: #fff;
   padding: 1rem;
   border-radius: 1rem;
@@ -68,4 +69,33 @@ body {
   background-color: var(--clr-primary);
   color: #fff;
   cursor: pointer;
+}
+
+.sub-title {
+  text-align: center;
+  margin-top: 2rem;
+}
+.message {
+  margin-top: 1rem;
+}
+.img-container {
+  width: 30%;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.message-header {
+  display: flex;
+}
+.message-header h2 {
+  text-align: center;
+  flex: 1;
+  align-self: center;
+}
+.message-body {
+  border-top: 1px solid #c2c2c2;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }

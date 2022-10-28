@@ -13,10 +13,14 @@ const App = () => {
     }
   ])
 
+  const addMessage = (message) => {
+    setMessages(state => [...state, message])
+  }
+
   return (
     <div className="container">
-      <MessageForm />
-      <Messages />
+      <MessageForm addMessage={addMessage} />
+      <Messages messages={messages} />
     </div>
   )
 }
