@@ -1,7 +1,13 @@
 import React from 'react'
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
+import Loading from '../components/Loading';
 
 const Profile = () => {
-  const isAuthenticated = true;
+  const { user, isAuthenticated, isLoading } = useAuth0()
+
+  if(isLoading) {
+    return <Loading />
+  }
 
   return (
     <div className='Profile'>
@@ -9,11 +15,11 @@ const Profile = () => {
         isAuthenticated &&
         <div className='card flex'>
           <div className='img-container'>
-            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80" alt="joakim wahlström" />
+            <img src={user.picture} alt={user.name} />
           </div>
           <div className='credentials'>
-            <h2>Joakim Wahlström</h2>
-            <p>wahlstrom.joakim@gmail.com</p>
+            <h2>{user.name}</h2>
+            <p>{user.email}</p>
           </div>
         </div>
       }
@@ -21,4 +27,7 @@ const Profile = () => {
   )
 }
 
-export default Profile
+// export default Profile
+export default withAuthenticationRequired(Profile, {
+  onRedirecting: () => <Loading />
+})

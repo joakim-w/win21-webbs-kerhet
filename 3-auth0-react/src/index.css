@@ -117,3 +117,25 @@ img {
   flex: 1;
   text-align: center;
 }
+.loader {
+  position: fixed;
+  background-color: #00000016;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+}
+.spinner {
+  width: 75px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #858b7d;
+  border-bottom-color: #858b7d;
+  animation: spin 700ms infinite ease-in-out;
+}
+
+@keyframes spin {
+  from { rotate: 0;}
+  to {rotate: 360deg;}
+}
