@@ -31,6 +31,14 @@ namespace asp.net_xss.Controllers
                 message.Body = HttpUtility.HtmlEncode(message.Body);
             }
 
+            foreach(var tag in _tagsAllowed)
+            {
+                var encodedTag = HttpUtility.HtmlEncode(tag);
+                foreach(var message in Messages)
+                {
+                    message.Body = message.Body.Replace(encodedTag, tag);
+                }
+            }
             
 
               return View(Messages);
@@ -94,7 +102,7 @@ namespace asp.net_xss.Controllers
 
                 messageEntity.Body = encodedBody;
                 
-
+                
 
                 _context.Add(messageEntity);
                 await _context.SaveChangesAsync();
