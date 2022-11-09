@@ -14,7 +14,7 @@
                 <p style="flex: 2">Vi använder cookies för att förbättra din upplevelse på våra webbplaster och för att visa personligt anpassade annonser utifrån din onlineaktivitet. Om du avvisar valfria cookies kommer endast cookies som krävs för att tillhandahålla tjänsterna att användas. <a asp-controller="Home" asp-action="Privacy" class="alert-link" >Sekretesspolicy</a></p>
 
                 <div style ="flex: 1; text-align: right;">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="alert" aria-label="Close" data-dismiss="alert" data-cookie-string="@cookieString">Godkänn</button>
+                    <button type="button" id="acceptCookieBtn" class="btn btn-secondary" data-bs-dismiss="alert" aria-label="Close" data-dismiss="alert" data-cookie-string="@cookieString">Godkänn</button>
                     <button type="button" class="btn btn-secondary ms-2" data-bs-dismiss="alert" aria-label="Close" data-dismiss="alert">Neka</button>
                 </div>
 
@@ -23,7 +23,12 @@
     </div>
 
     <script>
-
+        (function () {
+            const button = document.querySelector('#acceptCookieBtn');
+            button.addEventListener("click",() => {
+                document.cookie = button.dataset.cookieString;
+            })
+        })();
     </script>
 
 }

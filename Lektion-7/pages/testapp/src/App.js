@@ -5,7 +5,11 @@ import { useEffect } from 'react'
 function App() {
 
   useEffect(() => {
-    fetch('https://localhost:7208/api/Test/test2')
+    fetch('https://localhost:7208/api/Test/test1', {
+      headers: {
+        'x-custom-header': 'hej'
+      }
+    })
     .then(res => {
       console.log(res)
       return res.json()

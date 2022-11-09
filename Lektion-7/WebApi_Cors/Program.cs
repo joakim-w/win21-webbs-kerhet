@@ -19,13 +19,13 @@ builder.Services.AddCors(x =>
     {
         policy.WithOrigins("http://localhost:3000", "https://win21.azurewebsites.net");
         policy.WithMethods("POST", "GET", "PUT", "DELETE");
-        policy.WithHeaders(HeaderNames.ContentType);
+        policy.WithHeaders(HeaderNames.ContentType, "x-custom-header");
     });
 
     x.AddPolicy("liveserver", policy =>
     {
         policy.WithOrigins("http://127.0.0.1:5500");
-        policy.WithMethods("POST", "GET", "PUT", "DELETE", "OPTIONS");
+        policy.WithMethods("POST", "GET", "PUT", "DELETE");
         policy.WithHeaders(HeaderNames.ContentType, "x-custom-header");
     });
 
