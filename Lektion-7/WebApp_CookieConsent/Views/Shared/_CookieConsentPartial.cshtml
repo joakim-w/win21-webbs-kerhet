@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Http.Features
+
+@{
+    var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
+    var showBanner = !consentFeature?.CanTrack ?? false;
+    var cookieString = consentFeature?.CreateConsentCookie();
+}
+
+@if (showBanner) {
+
+    <div id="cookieConsent" class="alert alert-secondary alert-dismissible fade show" role="alert" >
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <p style="flex: 2">Vi använder cookies för att förbättra din upplevelse på våra webbplaster och för att visa personligt anpassade annonser utifrån din onlineaktivitet. Om du avvisar valfria cookies kommer endast cookies som krävs för att tillhandahålla tjänsterna att användas. <a asp-controller="Home" asp-action="Privacy" class="alert-link" >Sekretesspolicy</a></p>
+
+                <div style ="flex: 1; text-align: right;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="alert" aria-label="Close" data-dismiss="alert" data-cookie-string="@cookieString">Godkänn</button>
+                    <button type="button" class="btn btn-secondary ms-2" data-bs-dismiss="alert" aria-label="Close" data-dismiss="alert">Neka</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+
+}
