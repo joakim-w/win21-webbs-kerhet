@@ -25,6 +25,11 @@ const App = () => {
     const formData = new FormData()
     formData.append("file", data)
     
+    // const res = await axios.post('https://localhost:7267/api/Upload', formData, {
+    //   headers: {
+    //     'Authorization': 'Bearer <token>'
+    //   }
+    // })
     const res = await axios.post('https://localhost:7267/api/Upload', formData)
     console.log(res);
     setImageUrl(res.data);
