@@ -1,5 +1,6 @@
 ﻿using bloggi.Data;
 using bloggi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,7 @@ namespace bloggi.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreatePost(PostRequest post)
         {
             try

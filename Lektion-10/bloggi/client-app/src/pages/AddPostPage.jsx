@@ -1,20 +1,50 @@
 import { useState, useRef, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Quill from 'quill'
 import 'quill/dist/quill.snow.css'
 
 
 const AddPostPage = () => {
 
+  const [error, setError] = useState(false)
   const [quill, setQuill] = useState()
   const titleRef = useRef()
+  const navigate = useNavigate()
   // const qWrapper = useRef()
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
 
     const post = {
       title: titleRef.current.value,
       body: quill.root.innerHTML
+    }
+
+    try {
+
+      const token = localStorage.getItem('accessToken')
+
+      const res = await fetch('https://localhost:7164/api/Posts', {
+        method: 'POST',
+        body: JSON.stringify(post),
+        headers: {
+          'content-type': 'application/json',
+          'authorization': `Bearer ${token}`
+        }
+      })
+
+      if(!res.ok) {
+        throw new Error(res.status, res.statusText)
+      }
+
+      // titleRef.current.value = ''
+      // quill.root.innerHTML = ''
+      setError(false)
+      navigate('/')
+
+    } catch (err) {
+      console.log(err.message)
+      setError(true)
     }
 
     console.log(post)
@@ -43,6 +73,11 @@ const AddPostPage = () => {
   return (
     <div className='mt-5'>
       <h1>Add a new post</h1>
+      {
+        error && <div className="alert alert-danger" role="alert">
+        Somehting went wrong when creating the post
+      </div>
+      }
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">Title</label>
