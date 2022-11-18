@@ -1,0 +1,32 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  background-color: #00000048;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+}
+.spinner {
+  width: 75px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #4f6363;
+  border-bottom-color: #4f6363;
+  animation: spin 700ms infinite ease-in-out;
+}
+
+@keyframes spin {
+  from { rotate: 0; }
+  to { rotate: 360deg; }
+}
+
+#q-wrapper .ql-toolbar.ql-snow {
+  background-color: rgb(248,249,250);
+  border-radius: .4rem .4rem 0 0;
+}
+#q-wrapper .ql-container.ql-snow {
+  border-radius: 0 0 .4rem .4rem;
+  height: 650px;
+  overflow: auto;
+}
