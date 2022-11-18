@@ -5,68 +5,69 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = asp.net_xss
 build_property.RootNamespace = asp.net_xss
-build_property.ProjectDir = C:\Users\wahls\Desktop\Win22-webbsäkerhet\Lektion 5\asp.net xss\
+build_property.ProjectDir = c:\Users\wahls\Desktop\Win22-webbsäkerhet\Lektion 5\asp.net xss\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\wahls\Desktop\Win22-webbsäkerhet\Lektion 5\asp.net xss
+build_property.MSBuildProjectDirectory = c:\Users\wahls\Desktop\Win22-webbsäkerhet\Lektion 5\asp.net xss
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Areas/Identity/Pages/_ViewStart.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Home/Index.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Home/Privacy.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Create.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Delete.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Details.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Edit.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Index.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Messages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/Error.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/_LoginPartial.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/_ViewImports.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/_ViewStart.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/_Layout.cshtml]
+[c:/Users/wahls/Desktop/Win22-webbsäkerhet/Lektion 5/asp.net xss/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rwidu0pnp9

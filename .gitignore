@@ -1,0 +1,4 @@
+*.ldf
+*.mdf
+node_modules
+.env
